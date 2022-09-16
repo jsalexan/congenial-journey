@@ -1,38 +1,45 @@
-let inputGroupMB3 = document.querySelectorAll(".input-group");
 var container = document.querySelector(".container");
-var hoursInTheDay = 8;
+var hoursInTheDay = [1,2.3];
 
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do, YYYY"));
 
-
+let timeBlockHTML =
+`
+<div class="input-group mb-3"><span class="input-group-text" id="hours">01pm</span>
+<textarea class="col-md-10 time-block" placeholder="Add your event"></textarea>
+<button class="col-md-1 saveBtn" aria-label="save button 9AM"><i class='fa fa-save'></i></button>
+</div>
+`;
 
 function createSchedule() {
-  var n = $("<div>").addClass("test").appendTo(container);
-  var textArea = "Hello World!";
-  var timeBlockDiv;  
 
-  for(var i = 0; i < hoursInTheDay; i++) {
-    timeBlockDiv = $("<div>").addClass("input-group mb-3").appendTo(container);
-    $('<span>').addClass("input-group-text").text(textArea).appendTo(timeBlockDiv);
+   for(var i = 0; i < hoursInTheDay.length; i++) {
+    
+       container.innerHTML = timeBlockHTML;
+   
   }
 }
 
 createSchedule();
 
 
-function updateDivs() {
-    let timeBlockHTML =
-        `
-    <span class="input-group-text" id="9"> 09am</span>
-        <textarea class="col-md-10 time-block" placeholder="Add your event"></textarea>
-        <button class="col-md-1 saveBtn" aria-label="save button 9AM"><i class='fa fa-save'></i></button>
-    `;
-   
-   inputGroupMB3.innerHTML = timeBlockHTML;
-  };
+// function updateDivs() {
 
-updateDivs();
+//   for(var i = 0; i < hoursInTheDay; i++) {
+
+//     let timeBlockHTML =
+//         `
+//     <div class="input-group mb-3"><span class="input-group-text" id="hours">01pm</span>
+//     <textarea class="col-md-10 time-block" placeholder="Add your event"></textarea>
+//     <button class="col-md-1 saveBtn" aria-label="save button 9AM"><i class='fa fa-save'></i></button>
+//   </div>
+//     `;
+   
+//    container.innerHTML = timeBlockHTML;
+//  } };
+
+// updateDivs();
 
 // Pseudocode
 
