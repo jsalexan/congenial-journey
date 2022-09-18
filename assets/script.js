@@ -1,6 +1,7 @@
 var container = document.querySelector(".container");
 var hours = document.querySelectorAll(".hours");
 var textAreaEl = document.getElementById(".col-md-10");
+var hours = document.querySelectorAll("#hours");
 
 var k = document.querySelectorAll(".k");
 
@@ -8,7 +9,8 @@ var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do, YYYY"));
 
 let timeBlockHtmlString = [""];
-let hoursArray = ["9AM", "10AM", "11AM"];
+let hoursArray = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
+console.log(hoursArray);
 
 function createSchedule() {
 
