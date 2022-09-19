@@ -3,16 +3,20 @@ $("#currentDay").text(today.format("dddd, MMMM Do, YYYY"));
 
 
 function blockColors() {
-  var hour = moment().hours();
+  var currentHour = moment().hours();
+  console.log(currentHour);
 
   $(".timeSquare").each(function() {
-      var currentHour = parseInt($(this).attr("id"));
+      var idHour = parseInt($(this).attr("id"));
 
-          if (currentHour > hour) {
+          if (idHour > currentHour) {
           $(this).addClass("future");
-      } else if (currentHour === hour) {
+          $(this).removeClass("past");
+          $(this).removeClass("present");
+      } else if (idHour === currentHour) {
           $(this).addClass("present");
           $(this).removeClass("future");
+          $(this).removeClass("past");
       } else {
           $(this).addClass("past");
           $(this).removeClass("present");
@@ -20,6 +24,7 @@ function blockColors() {
       }
   })
 };
+
 
 blockColors();
 

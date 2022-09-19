@@ -6,10 +6,9 @@ body {
   
   textarea {
     background: transparent;
-    border: none;
+    border: 1px solid gray;
     resize: none;
     color: #000000;
-    border-left: 1px solid black;
     padding: 10px;
   }
   
@@ -27,13 +26,16 @@ body {
   
   span {
     width: 60px;
-    text-align: center;
-    background-color: #77dd77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
   
   .time-block {
     text-align: center;
     border-radius: 15px;
+   
   }
   
   .row {
@@ -44,7 +46,7 @@ body {
   
   .hour {
     background-color: #ffffff;
-    color: #000000;
+    color: gray;
     border-top: 1px dashed #000000;
   }
   
@@ -54,12 +56,12 @@ body {
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: #fa0747;
     color: white;
   }
   
   .future {
-    background-color: #77dd77;
+    background-color: #faba07;
     color: white;
   }
   
@@ -72,7 +74,7 @@ body {
  }
   
   .saveBtn i:hover {
-    font-size: 20px;
+    font-size: 25px;
     transition: all 0.3s ease-in-out;
   }
 
