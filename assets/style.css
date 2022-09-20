@@ -62,13 +62,13 @@ body {
   /* Class that can be applied to time blocks that are in the present. */
   .present, .present + textarea {
     background-color: #fa0747;
-    color: white
+    color: #086788
   }
   
    /* Class that can be applied to time blocks that are in the future */
   .future, .future + textarea {
     background-color: #fab907d7;
-    color: white
+    color: #086788
   }
   
   /* Button to save the text information along with the time. */
