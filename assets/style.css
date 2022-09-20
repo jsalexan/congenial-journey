@@ -54,19 +54,19 @@ body {
   }
   
   /* Class that can be applied to time blocks that are in the past. */
-  .past {
+  .past, .past + textarea {
     background-color: #9ce6fd;
     color: white;
   }
   
   /* Class that can be applied to time blocks that are in the present. */
-  .present {
+  .present, .present + textarea {
     background-color: #fa0747;
     color: white
   }
   
    /* Class that can be applied to time blocks that are in the future */
-  .future {
+  .future, .future + textarea {
     background-color: #fab907d7;
     color: white
   }
