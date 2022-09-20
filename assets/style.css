@@ -4,7 +4,7 @@ body {
     line-height: 1;
     background-color:#f7f595
   }
-  
+  /* The large header at the top of the page */
    .jumbotron {
     text-align: center;
     background: rgb(250,186,7);
@@ -19,6 +19,7 @@ body {
     white-space: pre-wrap;
   }
   
+  /* The text area for each hour block */
   textarea {
     background: aliceblue;
     border: 1px solid #06aed5;
@@ -27,11 +28,12 @@ body {
     padding: 5px;
   }
 
+  /* Styling for when you click in the text area of an hour block. */
   textarea:focus {
    outline-color: #fab907d7;
   }
 
- 
+ /* The square to the left of each block that displays the time. */
    span {
     width: 60px;
     display: flex;
@@ -39,31 +41,37 @@ body {
     align-items: center;
   }
 
+  /* Today's date at the top of the page. */
   #currentDay {
     font-weight: bold;
     font-size: 22px;
   }
 
+  /* The blocks for each hour */
   .time-block {
     text-align: center;
     padding-top: 30px;
   }
   
+  /* Class that can be applied to time blocks that are in the past. */
   .past {
     background-color: #9ce6fd;
     color: white;
   }
   
+  /* Class that can be applied to time blocks that are in the present. */
   .present {
     background-color: #fa0747;
     color: white
   }
   
+   /* Class that can be applied to time blocks that are in the future */
   .future {
     background-color: #fab907d7;
     color: white
   }
   
+  /* Button to save the text information along with the time. */
   .saveBtn {
     border-left: 1px solid #9ce6fd;
     border-top-right-radius: 15px;
@@ -71,7 +79,7 @@ body {
     background-color: #06aed5;
     color: white;
  }
-  
+  /* The save icon grows when you hover over it. */
   .saveBtn i:hover {
     font-size: 25px;
     transition: all 0.3s ease-in-out;

@@ -1,7 +1,7 @@
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do, YYYY"));
 
-
+// Function that determines the color of the time box depending on whether it is past, present, or future.
 function blockColors() {
   var currentHour = moment().hours();
   console.log(currentHour);
@@ -25,9 +25,9 @@ function blockColors() {
   })
 };
 
-
 blockColors();
 
+// Code to save the contents of the text area and the hour to local storage, as well as retrieve it.
 $(".saveBtn").on("click", function() {
 var value = $(this)
 .siblings(".time-block")
