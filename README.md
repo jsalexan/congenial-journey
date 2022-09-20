@@ -1,4 +1,4 @@
-# Timed Quiz
+# Work Day Scheduler
 
 ## Description
 
@@ -37,7 +37,7 @@ There you will find following : index.html, README, and license files, plus an A
 
 ## Usage
 The website (link above) was created to be used on a desktop computer. 
-![Screen capture of the scheduler.](./assets/images/127.0.0.1_3000_index.html_initials%3DJSA.png)
+![Screen capture of the scheduler.](./assets/127.0.0.1_3000_index.html.png)
 
 <br>
 
