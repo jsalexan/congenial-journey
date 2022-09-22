@@ -21,7 +21,7 @@ body {
   
   /* The text area for each hour block */
   textarea {
-    background: aliceblue;
+    
     border: 1px solid #06aed5;
     resize: none;
     color: #086788;
@@ -54,19 +54,19 @@ body {
   }
   
   /* Class that can be applied to time blocks that are in the past. */
-  .past, .past + textarea {
+  .past {
     background-color: #9ce6fd;
     color: white;
   }
   
   /* Class that can be applied to time blocks that are in the present. */
-  .present, .present + textarea {
+  .present {
     background-color: #fa0747;
     color: #086788
   }
   
    /* Class that can be applied to time blocks that are in the future */
-  .future, .future + textarea {
+  .future{
     background-color: #fab907d7;
     color: #086788
   }
