@@ -30,7 +30,7 @@ The remainder of the code was fairly straight forward. I did a fair amount of ti
 The website is hosted by GitHub pages. <br>
 You can find it here: [Link to Work Day Scheduler](https://jsalexan.github.io/congenial-journey/)
 <br><br>
-The repository is on GitHub: [Link to GitHub repository for Musical Theatre quiz.](https://github.com/jsalexan/congenial-journey) <br>
+The repository is on GitHub: [Link to GitHub repository for Work Day Scheduler.](https://github.com/jsalexan/congenial-journey) <br>
 There you will find following : index.html, README, and license files, plus an Access folder containing images, js, and style.css files.
 
 <br>
