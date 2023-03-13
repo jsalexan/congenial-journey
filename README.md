@@ -2,25 +2,9 @@
 
 ## Description
 
-This is a work day scheduler, created using JavaScript, jquery, Bootstrap, Moment, fontawesome, HTML, and CSS. The following requirements for its design were as follows: 
+This is a work day scheduler, created using JavaScript, jquery, Bootstrap, Moment, fontawesome, HTML, and CSS. The fields change styling according to the time of day and your schedule items are saved to local storage.
 
-## Acceptance Criteria
-
-    1. When the user opens the planner, the current day is displayed at the top of the calendar.
-    
-    2. When the user scrolls down, they are presented with timeblocks for standard business hours.
-
-    3. When the user views the timeblocks for that day, each timeblock is color coded to indicate whether it is in the past, present, or future.
-
-    4. When the user clicks into a timeblock, they can enter an event.
-
-    5. When the user clicks the save button for that timeblock, the text for that event is saved in local storage.
-    
-    6. When the user refreshes the page, the saved events persist.
-
-By meeting these goals, this scheduler demonstrates the use of several new techniques, most prominently Moment, Bootstrap, and Jquery, and the code is easy to read and understand. 
-
-I admit I spent the vast majority of my time on this project attempting to find a clean way to create the timeblocks using Jquery, but I struggled to find a way to add the different hours and IDs to those divs. Ultimately, my tutor advised me that it wasn't a requirement of the challenge, so I moved on. I still think it was useful as a research study. I tried dozens of methods and very nearly succeeded. I have left some of the code commented out in case anyone is interested. I'm looking forward to learning more about that. 
+This app demonstrates the use of several new techniques, most prominently Moment, Bootstrap, and Jquery, and the code is easy to read and understand. 
 
 The remainder of the code was fairly straight forward. I did a fair amount of tinkering trying to get the look just right. I was delighted that the local storage worked so beautifully as I had struggled with that on the last challenge. Growth!
 <br>
@@ -36,8 +20,8 @@ There you will find following : index.html, README, and license files, plus an A
 <br>
 
 ## Usage
-The website (link above) was created to be used on a desktop computer. 
-![Screen capture of the scheduler.](./assets/127.0.0.1_3000_index.html.png)
+The website (link above) was created to be used on a desktop computer, but it is fairly responsive due to Bootstrap. <br><br>
+![Screen capture of the scheduler.](/assets/workday.png)
 
 <br>
 
