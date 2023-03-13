@@ -1,89 +1,77 @@
-var today = moment();
+let today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do, YYYY"));
+let schedule = [];
 
-// Function that determines the color of the time box depending on whether it is past, present, or future.
+// Functions that determines the color of the time box and field depending on whether it is past, present, or future.
 function blockColors() {
-  var currentHour = moment().hours();
-  console.log(currentHour);
+  let currentHour = moment().hours();
 
-  $(".timeSquare").each(function() {
-      var idHour = parseInt($(this).attr("id"));
+  $(".time-block").each(function () {
+    let classHour = parseInt($(this).attr("class").split(" ")[2]);
+    console.log(classHour);
 
-          if (idHour > currentHour) {
-          $(this).addClass("future");
-          $(this).removeClass("past");
-          $(this).removeClass("present");
-      } else if (idHour === currentHour) {
-          $(this).addClass("present");
-          $(this).removeClass("future");
-          $(this).removeClass("past");
-      } else {
-          $(this).addClass("past");
-          $(this).removeClass("present");
-          $(this).removeClass("future");
-      }
-  })
-};
+    if (classHour > currentHour) {
+      $(this).addClass("future");
+      $(this).removeClass("past");
+      $(this).removeClass("present");
+    } else if (classHour === currentHour) {
+      $(this).addClass("present");
+      $(this).removeClass("future");
+      $(this).removeClass("past");
+    } else {
+      $(this).addClass("past");
+      $(this).removeClass("present");
+      $(this).removeClass("future");
+    }
+  });
+}
 
 blockColors();
 
-// Code to save the contents of the text area and the hour to local storage, as well as retrieve it.
-$(".saveBtn").on("click", function() {
-var value = $(this)
-.siblings(".time-block")
-.val()
-var time = $(this)
-.parent()
-.attr("id")
-localStorage.setItem(time, value);
-})
+function squareColors() {
+  let currentHour = moment().hours();
 
-$("#9 .time-block").val(localStorage.getItem("9"));
-$("#10 .time-block").val(localStorage.getItem("10"));
-$("#11 .time-block").val(localStorage.getItem("11"));
-$("#12 .time-block").val(localStorage.getItem("12"));
-$("#13 .time-block").val(localStorage.getItem("13"));
-$("#14 .time-block").val(localStorage.getItem("14"));
-$("#15 .time-block").val(localStorage.getItem("15"));
-$("#16 .time-block").val(localStorage.getItem("16"));
-$("#17 .time-block").val(localStorage.getItem("17"));
+  $(".timeSquare").each(function () {
+    let idHour = parseInt($(this).attr("id"));
 
+    if (idHour > currentHour) {
+      $(this).addClass("future");
+      $(this).removeClass("past");
+      $(this).removeClass("present");
+    } else if (idHour === currentHour) {
+      $(this).addClass("present");
+      $(this).removeClass("future");
+      $(this).removeClass("past");
+    } else {
+      $(this).addClass("past");
+      $(this).removeClass("present");
+      $(this).removeClass("future");
+    }
+  });
+}
 
+squareColors();
 
+// Save the contents of the text area and the hour to local storage, as well as retrieve it.
+$(".saveBtn").on("click", function () {
+  let value = $(this).siblings(".time-block").val();
+  let time = parseInt($(this).parent().attr("class").split(" ")[1]);
+  localStorage.setItem(time, value);
+});
 
-
-
-
-
-
-
-// let timeBlockHtmlString = [""];
-// let hoursArray = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
-// console.log(hoursArray);
-
-// function createSchedule() {
-
-//    for ( let i = 0; i < 8; i++) {
-//     timeBlockHtmlString += `<div class="input-group mb-3"><span class="input-group-text" id="hours"></span>
-//     <textarea class="col-md-10 time-block" placeholder="Add your event"></textarea>
-//      <button class="col-md-1 saveBtn" aria-label="save button"><i class='fa fa-save'></i></button>
-//      </div>`; 
-//     container.innerHTML = timeBlockHtmlString;
-// }
-// }
-// createSchedule();
-
-
-
-// $(".input-group-text").each(function (index) { $(this).siblings(".input-group-text").text(hoursArray[index]); });
-  
-
-
-
+$(".9 .time-block").val(localStorage.getItem("9"));
+$(".10 .time-block").val(localStorage.getItem("10"));
+$(".11 .time-block").val(localStorage.getItem("11"));
+$(".12 .time-block").val(localStorage.getItem("12"));
+$(".13 .time-block").val(localStorage.getItem("13"));
+$(".14 .time-block").val(localStorage.getItem("14"));
+$(".15 .time-block").val(localStorage.getItem("15"));
+$(".16 .time-block").val(localStorage.getItem("16"));
+$(".17 .time-block").val(localStorage.getItem("17"));
 
 // Pseudocode
 
-//Create divs using function and for loop. 
+//Create divs using function and for loop.
 
 //Use the replace HTML to add the other tags within the div.
 
